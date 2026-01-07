@@ -21,7 +21,8 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
 ## 🛠️ Requirements
 - **Python 3.11+**
 - **Minecraft Java Edition** (Supported versions by GDPC, e.g., 1.19, 1.20)
-- **GDPC HTTP Interface Mod** (running on a local Minecraft server or single-player world)
+- **GDPC HTTP Interface Mod**
+　- [Download GDPC Mod from here](https://github.com/avdstaaij/gdpc) (Refer to their installation guide).
 - **Google Gemini API Key**
 
 ## 📦 Installation
@@ -38,9 +39,11 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
    ```
 
 3. **Setup Environment (.env)**
-Open the `.env` file and paste your API key as follows:
+1. Create a file named `.env` in the project root directory.
+2. Open the `.env` file and paste your API key and LLM model name as follows:
       ```env
       GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
+      MODEL_NAME=gemini-2.5-pro
       ```
 
 ## 🚀 Usage
@@ -107,6 +110,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Python 3.11以上
 - Minecraft Java Edition
 - GDPC (Generative Design in Minecraft) 環境
+  - [GDPC Modのダウンロードはこちら](https://github.com/avdstaaij/gdpc)
 - Google Gemini API Key
 
 ## 使い方
@@ -129,9 +133,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    pip install -r requirements.txt
    ```
 3. **環境変数の設定 (.env)**
-プロジェクトのルートフォルダに `.env` という名前のファイルを開き、自身のAPIキーを以下のように記述します。
+1. プロジェクトのルートフォルダに `.env` という名前のファイルを作成する。 
+2. そのファイルを開き、LLMのモデルネームと自身のAPIキーを以下のように記述します。
       ```env
       GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
+      MODEL_NAME=gemini-2.5-pro
       ```
 
 ## 開発者
