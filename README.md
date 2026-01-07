@@ -22,7 +22,7 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
 - **Python 3.11+**
 - **Minecraft Java Edition** (Supported versions by GDPC, e.g., 1.19, 1.20)
 - **GDPC HTTP Interface Mod**
-　- [Download GDPC Mod from here](https://github.com/avdstaaij/gdpc) (Refer to their installation guide).
+   - [Download GDPC Mod from here](https://github.com/avdstaaij/gdpc) (Refer to their installation guide).
 - **Google Gemini API Key**
 
 ## 📦 Installation
