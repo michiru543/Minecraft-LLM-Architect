@@ -38,12 +38,10 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
    ```
 
 3. **Setup Environment (.env)**
-   1. Create a file named `.env` in the project root directory.
-   2. Open the `.env` file and paste your API key as follows:
+Open the `.env` file and paste your API key as follows:
       ```env
       GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
       ```
-   3. **Note**: The `.env` file is excluded from Git (via `.gitignore`) to keep your key safe.
 
 ## 🚀 Usage
 
@@ -83,7 +81,7 @@ The system utilizes a **Chain-of-Thought** approach implemented via LangChain:
 ├── materials/              # Material definitions (materials.txt)
 ├── generated/              # Output logs and generated code
 ├── main.py                 # Main entry point
-├── .env                    # API Key configuration (Create this manually)
+├── .env                    # API Key configuration
 └── README.md
 ```
 
@@ -116,9 +114,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 1. マインクラフトを起動し、GDPC導入済みのワールドに入ります。
 2. `main.py` を実行します。
 3. プロンプト（建築物の説明）を入力します（例: *"A modern house with glass walls"*）。
-4. システムが推論を行い、`generated/` フォルダにPythonコード（例: `code_YYYYMMDD.py`）を生成します。
+4. システム実行完了後`generated/` フォルダにPythonコード（例: `code_YYYYMMDD.py`）が生成されます。
 5. **手動設定**: 生成されたコードを開き、**最下部にある `build_area`（建築座標）を手動で書き換えてください**（プレイヤー位置への自動追従は未実装です）。
-6. 修正したコードを実行すると、Minecraft内に建築されます。
+6. 修正したコードを実行すると、Minecraft内に建築が生成されます。
 
 ## インストールと設定
 
@@ -131,8 +129,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    pip install -r requirements.txt
    ```
 3. **環境変数の設定 (.env)**
-   1. プロジェクトのルートフォルダに `.env` という名前のファイルを作成します。
-   2. ファイルを開き、自身のAPIキーを以下のように記述します。
+プロジェクトのルートフォルダに `.env` という名前のファイルを開き、自身のAPIキーを以下のように記述します。
       ```env
       GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
       ```
