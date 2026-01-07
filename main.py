@@ -14,7 +14,6 @@ from utils.save_log import save_raw_response
 
 load_dotenv()
 MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.5-pro")
-API_KEY = os.getenv("GOOGLE_API_KEY")
 
 INPUT_PRICE_PER_1M = 1.25
 OUTPUT_PRICE_PER_1M = 10.00
@@ -184,3 +183,4 @@ if __name__ == "__main__":
     print(f"\nLog saved to: {log_save_path}")
 
     print(f"Code saved to: {code_save_path}")
+
