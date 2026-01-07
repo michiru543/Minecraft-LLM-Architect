@@ -144,4 +144,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 開発者
 - **Affiliation**: College of Information Science and Engineering, Ritsumeikan University
 - **Author**: LI Junman
-- **ID**: 2600220488-5
