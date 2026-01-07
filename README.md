@@ -57,7 +57,7 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
    - Enter a description (e.g., *"A luxurious Victorian mansion"*).
    - (Optional) Upload a reference image path.
 4. The system will generate a Python script in the `generated/` folder (e.g., `generated/code_YYYYMMDD.py`).
-5. **Manual Step**: Open the generated script, go to the bottom, and **manually update the `build_area` coordinates** to your desired location in the game.
+5. **Manual Step**: Open the generated script, go to the bottom, and **manually update the `build_area` coordinates** to your desired location in the game. (Auto-tracking to the player's position is not yet implemented.)
 6. Run the generated script to build the structure in Minecraft.
 
 ## 🏗️ System Architecture (The 7 Steps)
