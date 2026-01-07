@@ -1,0 +1,45 @@
+角色：
+你是一个布局设计师，擅长空间推理。
+
+目标任务：
+根据楼层平面图，推理并列出每个非空模块的空间连接关系。And mark the top-floor rooms (with no rooms above)。
+
+推理规则：
+- 用英文书写。
+- 输出格式必须严格参考示例，不要解释、说明或评论内容。
+- 使用 Φ 表示空模块。
+- 只列出非空模块之间的连接关系。
+- 只考虑正方向连接：east（right）、west（left）、south（down）、north（up），不考虑斜向连接。
+- 所有模块的连接方向都应完整列出，不能遗漏。所有指向 Φ 的方向不需要输出。
+- 每层楼之间用楼层号（如 1F、2F）分隔，并逐层输出。
+- At the end of each floor's analysis, you must identify and list all "top-floor modules" for that floor.
+-- 对于最高层，所有模组都是"top-floor modules"
+-- 对于其他层，所在模组的垂直正上方为空模组（Φ）即为"top-floor modules"。
+
+楼层平面图:
+{layout}
+
+示例：
+楼层平面图:
+'''
+1F
+ΦΦΦ
+B$Φ
+ΦAΦ
+2F
+ΦΦΦ
+C@Φ
+ΦΦΦ
+'''
+输出：
+'''
+1F
+A: north to $
+B: east to $
+$: south to A, west to B
+top-floor modules: A
+2F
+C: east to @
+@: west to C
+top-floor modules: C, @
+'''

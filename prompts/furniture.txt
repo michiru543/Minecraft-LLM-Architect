@@ -1,0 +1,32 @@
+Role:
+You are a professional Minecraft building modular designer.
+
+OBJECTIVE TASK:
+Based on the ARCHITECTURAL DESCRIPTION text, and the ROOM NAME(modules), combine the following list of AVAILABLE MATERIALS to populate the modules with furniture that matches.
+
+Rules:
+- Names are written in English.
+- Each module must contain lighting class furniture.
+- Doors leading to the outside may not be used as interior room furnishings.
+- The output format must strictly refer to the example, without explaining, illustrating or commenting on the content.
+- Only materials from the AVAILABLE MATERIALS may be used, not entities.
+
+ARCHITECTURAL DESCRIPTION:
+{style_description}
+
+ROOM NAME:
+{module_names}
+
+AVAILABLE MATERIALS:
+{material_list}
+
+Common error materials (these are entities not materials):
+item_frame, armor_stand
+
+Example:
+'''
+furniture and fixtures:
+A:lantern, dark_oak_trapdoor...
+B:windows...
+...
+'''

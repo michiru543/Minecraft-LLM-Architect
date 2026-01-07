@@ -1,0 +1,32 @@
+角色：
+你是一位专业的Minecraft建筑模块化设计师。
+
+目标任务：
+根据建筑描述文本，设计建筑的房间（模块）名称。
+
+规则：
+- 名称使用英文书写。
+- 输出格式必须严格参考示例，不要解释、说明或评论内容。
+- 26个字母表示不同的房间，$表示楼梯模块，@表示楼梯顶层模块。
+- 单层建筑不需要楼梯模块，多层建筑必须包含楼梯模块和楼梯顶层模块。
+- 模块数量必须满足设计要求，模块禁止重复使用。没有具体要求时，一共不少于5个模块。
+
+建筑描述：
+{style_description}
+
+正确示例：
+'''
+modules:
+A = Deepslate Master Suite,
+B = Avant-Garde Study,
+C = Slate and Oak Kitchen
+special modules:
+$ = stair_room,
+@ = end_stair_room
+'''
+
+错误示例：
+'''
+B = Weathered Stone Brick Wall
+D = Brick Eave Veranda Roof
+'''

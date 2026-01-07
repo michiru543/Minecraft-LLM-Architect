@@ -1,0 +1,53 @@
+{
+  "theme": "A cozy woolen cottage with a classic, sloped roof, balancing soft textures with sturdy, grounding elements.",
+  "building_materials": {
+    "foundation": "cobblestone",
+    "frame": "dark_oak_log",
+    "walls": "white_wool with light_gray_wool accents",
+    "windows": "glass_pane",
+    "roof": "deepslate_bricks",
+    "flooring": "spruce_planks"
+  },
+  "modules": [
+    {
+      "name": "Hearthstone Living Room",
+      "code": "A",
+      "position": "First Floor, Center",
+      "foundation": "cobblestone",
+      "walls": "dark_oak_log frame with white_wool and light_gray_wool panels",
+      "ceiling": "spruce_planks",
+      "entrances": {
+        "north": "to Timber Frame Stairway"
+      },
+      "furniture_and_fixtures": {
+        "fireplace": "A central fireplace made of cobblestone, cobblestone_stairs, cobblestone_wall, dark_oak_log, dark_oak_stairs, and dark_oak_slab with a lit campfire",
+        "storage": "bookshelf",
+        "lighting": "lantern and torch (lighting level: 8)",
+        "decoration": "white_wool accents, light_gray_carpet, and a flower_pot with a potted_fern"
+      },
+      "roof": {
+        "type": "sloped",
+        "material": "deepslate_bricks",
+        "details": "A-frame style with dark_oak_log ridges"
+      }
+    },
+    {
+      "name": "Rustic Cottage Kitchen",
+      "code": "B",
+      "position": "First Floor, Northeast",
+      "foundation": "cobblestone",
+      "walls": "dark_oak_log frame with white_wool and light_gray_wool panels",
+      "ceiling": "spruce_planks",
+      "entrances": {
+        "west": "to Timber Frame Stairway"
+      },
+      "furniture_and_fixtures": {
+        "appliances": "smoker and cauldron",
+        "countertops": "spruce_planks, spruce_trapdoor, and spruce_slab with dark_oak_stairs and a tripwire_hook as a faucet",
+        "storage": "barrels and a dark_oak_fence for hanging items",
+        "lighting": "lantern, candle, and soul_torch (lighting level: 6)",
+        "food": "cake"
+      }
+    }
+  ]
+}

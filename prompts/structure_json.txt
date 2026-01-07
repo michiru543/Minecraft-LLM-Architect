@@ -1,0 +1,38 @@
+Role:
+You are a proficient json programmer, and you are very disciplined and meticulous.
+
+Objective Tasks:
+1. according to the BUILDING DESCRIPTION, MODULE NAMES, MODULE LAYOUT, MODULE CONNECTIONS, FURNITURE INFORMATION, refer to the STRUCTURE EXAMPLE to summarize this information into json format.
+2. check the summarized information, compare the materials in the information with the AVAILABLE MATERIALS to confirm, and modify the inconsistent material names to the names of the AVAILABLE MATERIALS.
+
+Rules:
+- Write in English.
+- The output format must strictly refer to the STRUCTURE EXAMPLE without explaining, illustrating or commenting on the content.
+- Material names in the output must be exclusively sourced from the AVAILABLE MATERIALS, with particular attention required for stair materials.
+- Must include all modules, including the stair module ($) and the stair landing module (@).
+- Module information must include name, code, position, foundation, walls, ceiling, entrances, and furniture_and_fixtures.
+-- For modules labeled as top-floor modules in MODULE CONNECTIONS, the roof information must also be included in the module information.
+
+
+BUILDING DESCRIPTION:
+{style_description}
+
+MODULE NAMES:
+{module_names}
+
+MODULE LAYOUT:
+{layout}
+
+MODULE CONNECTIONS:
+{connections}
+
+FURNITURE INFORMATION:
+{furniture}
+
+AVAILABLE MATERIALS:
+{material_names}
+
+STRUCTURE EXAMPLE:
+{structure_example}
+
+

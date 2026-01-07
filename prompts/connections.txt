@@ -1,0 +1,59 @@
+Role:
+You are a layout designer who specializes in spatial reasoning.
+
+OBJECTIVE TASK:
+Based on a FLOOR PLAN, reason and list the spatial connectivity of each non-empty module. And mark the top-floor modules (with no modules above).
+
+Rules of reasoning:
+- Write in English.
+- The output must be formatted to refer strictly to the example without explaining, illustrating, or commenting on the content.
+- Use Φ for empty modules. Only list connections between non-empty modules.
+- Only positive connections are considered: east (right), west (left), south (down), north (up), not diagonal connections.
+- The direction of connection of all modules should be listed completely without omission. All directions pointing to Φ do not need to be output.
+- Each floor is separated by a floor number (e.g. 1F, 2F) and is output floor by floor.
+- At the end of each floor's analysis, you must identify and list all “top-floor modules” for that floor.
+-- For the top floor, all modules are “top-floor modules”.
+-- For other floors, a module is a “top-floor module” if the vertical space directly above it is occupied by an empty module (Φ).
+
+FLOOR PLAN:
+{layout}
+
+Example:
+FLOOR PLAN:
+'''
+1F
+ΦCΦ
+B$Φ
+ΦAΦ
+2F
+ΦΦΦ
+D@Φ
+ΦΦΦ
+'''
+Correct output:
+'''
+1F
+A: north to $
+B: east to $
+C: south to $
+$: north to C, south to A, west to B
+top-floor modules: A, C
+2F
+D: east to @
+@: west to D
+top-floor modules: D, @
+'''
+Incorrect output:
+'''
+1F
+A: north to $
+B: east to $, north to C, south to A
+C: south to $
+$: north to C, south to A, west to B
+top-floor modules: A, C
+2F
+D: east to @
+@: west to D
+top-floor modules: D, @
+'''
+(Reason: C and A is diagonal connection)
