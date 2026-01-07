@@ -39,8 +39,8 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
    ```
 
 3. **Setup Environment (.env)**
-1. Create a file named `.env` in the project root directory.
-2. Open the `.env` file and paste your API key and LLM model name as follows:
+   1. Create a file named `.env` in the project root directory.
+   2. Open the `.env` file and paste your API key and LLM model name as follows:
       ```env
       GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
       MODEL_NAME=gemini-2.5-pro
@@ -133,8 +133,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    pip install -r requirements.txt
    ```
 3. **環境変数の設定 (.env)**
-1. プロジェクトのルートフォルダに `.env` という名前のファイルを作成する。 
-2. そのファイルを開き、LLMのモデルネームと自身のAPIキーを以下のように記述します。
+   1. プロジェクトのルートフォルダに `.env` という名前のファイルを作成する。 
+   2. そのファイルを開き、LLMのモデルネームと自身のAPIキーを以下のように記述します。
       ```env
       GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
       MODEL_NAME=gemini-2.5-pro
