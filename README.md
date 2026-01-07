@@ -28,7 +28,7 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YourUsername/Minecraft-LLM-Architect.git
+   git clone https://github.com/michiru543/Minecraft-LLM-Architect.git
    cd Minecraft-LLM-Architect
    ```
 
@@ -122,7 +122,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 1. リポジトリをクローンします。
    ```bash
-   git clone https://github.com/YourUsername/Minecraft-LLM-Architect.git
+   git clone https://github.com/michiru543/Minecraft-LLM-Architect.git
    ```
 2. 必要なライブラリをインストールします。
    ```bash
