@@ -1,5 +1,6 @@
 import time
 import os
+from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor
 from chains.model_style import get_style_description
 from chains.model_modules import generate_module_names
@@ -11,7 +12,9 @@ from chains.model_code import generate_code_and_save
 from utils.load_functions import load_material_map
 from utils.save_log import save_raw_response
 
-MODEL_NAME = "gemini-2.5-pro"
+load_dotenv()
+MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.5-pro")
+API_KEY = os.getenv("GOOGLE_API_KEY")
 
 INPUT_PRICE_PER_1M = 1.25
 OUTPUT_PRICE_PER_1M = 10.00
@@ -179,4 +182,5 @@ if __name__ == "__main__":
     save_raw_response("\n".join(report_lines), log_save_path, "")
 
     print(f"\nLog saved to: {log_save_path}")
+
     print(f"Code saved to: {code_save_path}")
