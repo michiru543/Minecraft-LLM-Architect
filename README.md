@@ -118,9 +118,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 1. マインクラフトを起動し、GDPC導入済みのワールドに入ります。
 2. `main.py` を実行します。
 3. プロンプト（建築物の説明）を入力します（例: *"A modern house with glass walls"*）。
-4. システム実行完了後`generated/` フォルダにPythonコード（例: `code_YYYYMMDD.py`）が生成されます。
-5. **手動設定**: 生成されたコードを開き、**最下部にある `build_area`（建築座標）を手動で書き換えてください**（プレイヤー位置への自動追従は未実装です）。
-6. 修正したコードを実行すると、Minecraft内に建築が生成されます。
+4. （任意）参考させたい画像のパスを入力する。
+5. システム実行完了後`generated/` フォルダにPythonコード（例: `code_YYYYMMDD.py`）が生成されます。
+6. **手動設定**: 生成されたコードを開き、**最下部にある `build_area`（建築座標）を手動で書き換えてください**（プレイヤー位置への自動追従は未実装です）。
+7. 修正したコードを実行すると、Minecraft内に建築が生成されます。
 
 ## インストールと設定
 
