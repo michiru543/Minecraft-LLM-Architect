@@ -16,7 +16,7 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
 - **Interior & Layout Focus**: Generates playable interiors with furniture appropriate for each room's function.
 - **Spatial Reasoning**: Uses a coordinate-based logic to determine room adjacencies and door placements.
 - **Parallel Processing**: Utilizes threading to generate furniture and layouts simultaneously for efficiency.
-- **Automated Construction**: Converts the generated plan into Python code using the **GDPC (Generative Design in Minecraft)** library to build directly in the game.
+- **Code Generation**: Converts the generated plan into executable Python code using the **GDPC (Generative Design in Minecraft)** library.
 
 ## 🛠️ Requirements
 - **Python 3.11+**
@@ -37,9 +37,13 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
    pip install -r requirements.txt
    ```
 
-3. **Setup Environment**
-   - **Important**: Do not hardcode your API Key.
-   - Set your Gemini API key in an environment variable or create a `.env` file (if implemented).
+3. **Setup Environment (.env)**
+   1. Create a file named `.env` in the project root directory.
+   2. Open the `.env` file and paste your API key as follows:
+      ```env
+      GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
+      ```
+   3. **Note**: The `.env` file is excluded from Git (via `.gitignore`) to keep your key safe.
 
 ## 🚀 Usage
 
@@ -51,7 +55,9 @@ Powered by **Google Gemini 2.5 Pro** and **LangChain**, the generation process i
 3. Follow the CLI prompts:
    - Enter a description (e.g., *"A luxurious Victorian mansion"*).
    - (Optional) Upload a reference image path.
-4. The system will process the steps and build the structure near the player.
+4. The system will generate a Python script in the `generated/` folder (e.g., `generated/code_YYYYMMDD.py`).
+5. **Manual Step**: Open the generated script, go to the bottom, and **manually update the `build_area` coordinates** to your desired location in the game.
+6. Run the generated script to build the structure in Minecraft.
 
 ## 🏗️ System Architecture (The 7 Steps)
 
@@ -77,6 +83,7 @@ The system utilizes a **Chain-of-Thought** approach implemented via LangChain:
 ├── materials/              # Material definitions (materials.txt)
 ├── generated/              # Output logs and generated code
 ├── main.py                 # Main entry point
+├── .env                    # API Key configuration (Create this manually)
 └── README.md
 ```
 
@@ -96,7 +103,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **7段階の生成パイプライン**: スタイル決定、部屋定義、家具配置、レイアウト、接続推論、統合、コード生成にタスクを分割。
 - **内装とレイアウトの重視**: 外観だけでなく、居住可能な内装と動線を生成。
 - **並列処理**: 家具生成とレイアウト生成を並列化し、処理時間を短縮。
-- **自動建築**: **GDPC** ライブラリを介して、生成されたPythonコードを即座にゲーム内に反映。
+- **コード生成**: **GDPC** ライブラリを用いて、実際に建築を行うためのPythonスクリプトを出力します。
 
 ## 動作環境
 - Python 3.11以上
@@ -109,7 +116,26 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 1. マインクラフトを起動し、GDPC導入済みのワールドに入ります。
 2. `main.py` を実行します。
 3. プロンプト（建築物の説明）を入力します（例: *"A modern house with glass walls"*）。
-4. システムが推論を行い、プレイヤーの近くに建築物が自動生成されます。
+4. システムが推論を行い、`generated/` フォルダにPythonコード（例: `code_YYYYMMDD.py`）を生成します。
+5. **手動設定**: 生成されたコードを開き、**最下部にある `build_area`（建築座標）を手動で書き換えてください**（プレイヤー位置への自動追従は未実装です）。
+6. 修正したコードを実行すると、Minecraft内に建築されます。
+
+## インストールと設定
+
+1. リポジトリをクローンします。
+   ```bash
+   git clone https://github.com/YourUsername/Minecraft-LLM-Architect.git
+   ```
+2. 必要なライブラリをインストールします。
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **環境変数の設定 (.env)**
+   1. プロジェクトのルートフォルダに `.env` という名前のファイルを作成します。
+   2. ファイルを開き、自身のAPIキーを以下のように記述します。
+      ```env
+      GOOGLE_API_KEY="AIzaSyYourApiKeyHere..."
+      ```
 
 ## 開発者
 - **Affiliation**: College of Information Science and Engineering, Ritsumeikan University
