@@ -1,0 +1,19 @@
+Input: A woolen house with a cone roof
+入力：円錐形屋根付きのウール製の家
+sysA:https://www.youtube.com/watch?v=3O_sABxuygI
+sysB:https://youtu.be/IGBEwwXqimc
+
+Input: A white house with a glass roof
+入力：ガラス屋根の白い家
+sysA:https://youtu.be/5IkidoTZS-w
+sysB:https://youtu.be/OuE2r3N9Wfk
+
+Input: A wooden house with a stone made roof
+入力：木造の家、石造りの屋根付き
+sysA:https://youtu.be/z2TmkUqJHNk
+sysB:https://youtu.be/j6NqDDyWALw
+
+Input: A stone house with a door and a wooden roof
+入力：石造りの家、扉と木造の屋根付き
+sysA:https://youtu.be/87Wxz_06Dwg
+sysB:https://youtu.be/lkyKjLSgZI0
